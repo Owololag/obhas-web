@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Opening Offer | OBHAS WEBS - Global Digital Solutions</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to your main stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        :root {
+            --navy: #0a192f;
+            --orange: #ff8c00;
+            --white: #ffffff;
+            --light: #f4f7f9;
+        }
+
+        /* Hero Section with Backdrop */
+        .promo-hero {
+            height: 80vh;
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('../images/hero-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .promo-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 800px;
+        }
+
+        /* Urgency Bar */
+        .urgency-bar {
+            background: #ff4d4d;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 1100;
+            font-size: 14px;
+        }
+
+        /* Pricing Section */
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: -100px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .price-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.3s;
+            border-top: 5px solid var(--navy);
+        }
+
+        .price-box.featured {
+            border-top: 5px solid var(--orange);
+            transform: scale(1.05);
+        }
+
+        .price-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .big-price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--orange);
+            margin: 20px 0;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 30px;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .features-list i {
+            color: #25d366;
+            margin-right: 10px;
+        }
+
+        /* Tech Icons */
+        .tech-stack i {
+            font-size: 2.5rem;
+            color: #ccc;
+            margin: 0 20px;
+            transition: 0.3s;
+        }
+
+        .tech-stack i:hover {
+            color: var(--orange);
+        }
+
+        @media (max-width: 768px) {
+            .pricing-container { margin-top: 20px; }
+            .promo-hero { height: auto; padding: 100px 20px; }
+            .promo-card h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Urgency Bar -->
+    <div class="urgency-bar">
+        🚀 GLOBAL LAUNCH: We are building 2 basic sites for FREE to expand our international portfolio! 
+        <a href="https://wa.me/2348187924887?text=I'm%20applying%20for%20the%20Global%20Portfolio%20Slot" style="color: white; text-decoration: underline; margin-left: 10px;">Apply Now</a>
+    </div>
+
+    <!-- Header -->
+    <header style="background: var(--navy); position: relative;">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="OBHAS Logo"> 
+                <span>OBHAS WEBS</span>
+            </div>
+            <a href="https://wa.me/2348187924887" class="btn-orange">Consultation</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="promo-hero">
+        <div class="promo-card">
+            <h1>Transform Your Business with a <span class="text-orange">High-Performance</span> Website</h1>
+            <p>OBHAS WEBS is expanding globally. Secure world-class digital solutions and innovative web design at our special introductory rates.</p>
+            <div style="margin-top: 30px;">
+                <a href="#offers" class="btn-orange">Explore Exclusive Offers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Offers -->
+    <section id="offers" class="section bg-light">
+        <div class="container">
+            <div class="pricing-container">
+                
+                <!-- Strategy Call -->
+                <div class="price-box">
+                    <h3>Strategy Session</h3>
+                    <div class="big-price">FREE</div>
+                    <p>Ideal for emerging brands</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> 15-Min Digital Strategy</li>
+                        <li><i class="fas fa-check"></i> Brand Identity Audit</li>
+                        <li><i class="fas fa-check"></i> Tech Stack Consultation</li>
+                        <li><i class="fas fa-check"></i> Project Roadmap</li>
+                    </ul>
+                    <a href="https://wa.me/2348187924887?text=I'd%20like%20to%20book%20a%20FREE%20Global%20Strategy%20Session" class="btn-orange full-width text-center">Book Session</a>
+                </div>
+
+                <!-- Main Offer -->
+                <div class="price-box featured">
+                    <div style="background: var(--orange); color: white; padding: 5px 15px; border-radius: 50px; display: inline-block; font-size: 12px; font-weight: bold; margin-bottom: 10px;">LIMITED WORLDWIDE SLOTS</div>
+                    <h3>Global Launch Slot</h3>
+                    <div class="big-price">₦0.00</div>
+                    <p>Exclusive portfolio opportunity</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> 1-Page Responsive Site</li>
+                        <li><i class="fas fa-check"></i> Modern UI/UX Design</li>
+                        <li><i class="fas fa-check"></i> Direct WhatsApp Integration</li>
+                        <li><i class="fas fa-check"></i> Global Standard Delivery</li>
+                    </ul>
+                    <a href="https://wa.me/2348187924887?text=I%20want%20to%20claim%20the%200.00%20Global%20Launch%20Website%20Slot" class="btn-orange full-width text-center">Secure My Slot</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title text-center">The OBHAS Methodology</h2>
+            <div class="grid-3" style="margin-top: 50px; text-align: center;">
+                <div>
+                    <div style="font-size: 2.5rem; color: var(--orange); margin-bottom: 15px;"><i class="fas fa-comments"></i></div>
+                    <h3>1. Discovery</h3>
+                    <p>We analyze your business objectives and digital requirements via a secure chat.</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; color: var(--orange); margin-bottom: 15px;"><i class="fas fa-layer-group"></i></div>
+                    <h3>2. Development</h3>
+                    <p>Our engineers build your high-performance platform using industry-standard tech.</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; color: var(--orange); margin-bottom: 15px;"><i class="fas fa-rocket"></i></div>
+                    <h3>3. Deployment</h3>
+                    <p>We launch your solution to the global market and provide post-launch support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section bg-light text-center">
+        <div class="container">
+            <p style="font-weight: bold; color: #888;

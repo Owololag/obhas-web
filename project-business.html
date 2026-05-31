@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Portfolio Project | OBHAS WEBS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-header { background: var(--navy); padding: 120px 0 60px; color: white; text-align: center; }
+        .project-body { padding: 60px 0; }
+        .project-main-img { width: 100%; border-radius: 15px; margin-bottom: 40px; }
+        .project-info-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+        .spec-list { background: var(--light); padding: 30px; border-radius: 10px; border-left: 5px solid var(--navy); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--orange); font-weight: 600; }
+        @media (max-width: 768px) { .project-info-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo"><img src="images/logo.png" alt="Logo"> <span>OBHAS WEBS</span></div>
+            <nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="portfolio.html">Portfolio</a></li></ul></nav>
+        </div>
+    </header>
+
+    <div class="project-header">
+        <div class="container">
+            <h1>Corporate Business Portfolio</h1>
+            <p>Clean, efficient, and professional digital identity.</p>
+        </div>
+    </div>
+
+    <section class="project-body">
+        <div class="container">
+            <a href="portfolio.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            <div class="project-info-grid">
+                <div class="project-desc">
+                    <img src="images/project2.jpg" alt="Business Portfolio" class="project-main-img">
+                    <h2>Global Partners Ltd Showcase</h2>
+                    <p>Global Partners Ltd needed a digital home that established immediate trust with international investors. OBHAS WEBS delivered a structured, clean, and highly professional business portfolio.</p>
+                    <br>
+                    <p>Key features included a detailed service breakdown, integrated PDF brochures for download, and a secure lead-generation contact system. We prioritized fast loading times and corporate readability to ensure their message is clear across all devices.</p>
+                </div>
+                <div class="project-sidebar">
+                    <div class="spec-list">
+                        <h4>Project Details</h4>
+                        <ul style="list-style:none; padding:0;">
+                            <li style="display:flex; justify-content:space-between; margin-bottom:10px; border-bottom:1px solid #ddd;"><span>Client:</span> <strong>Global Partners Ltd</strong></li>
+                            <li style="display:flex; justify-content:space-between; margin-bottom:10px; border-bottom:1px solid #ddd;"><span>Category:</span> <strong>Corporate Web</strong></li>
+                            <li style="display:flex; justify-content:space-between; margin-bottom:10px; border-bottom:1px solid #ddd;"><span>Tech:</span> <strong>Bootstrap, PHP, JS</strong></li>
+                            <li style="display:flex; justify-content:space-between; margin-bottom:10px; border-bottom:1px solid #ddd;"><span>Duration:</span> <strong>3 Weeks</strong></li>
+                        </ul>
+                        <button class="btn-orange full-width" style="margin-top:20px;">Live Preview</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

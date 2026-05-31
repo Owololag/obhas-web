@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Agency Project | OBHAS WEBS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Inline style for specific project tweaks -->
+    <style>
+        .project-header { background: var(--navy); padding: 120px 0 60px; color: white; text-align: center; }
+        .project-body { padding: 60px 0; }
+        .project-main-img { width: 100%; border-radius: 15px; margin-bottom: 40px; }
+        .project-info-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+        .spec-list { background: var(--light); padding: 30px; border-radius: 10px; border-left: 5px solid var(--orange); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--orange); font-weight: 600; }
+        @media (max-width: 768px) { .project-info-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo"><img src="images/logo.png" alt="Logo"> <span>OBHAS WEBS</span></div>
+            <nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="portfolio.html">Portfolio</a></li></ul></nav>
+        </div>
+    </header>
+
+    <div class="project-header">
+        <div class="container">
+            <h1>Creative Agency Branding</h1>
+            <p>Pushing the boundaries of digital aesthetics.</p>
+        </div>
+    </div>
+
+    <section class="project-body">
+        <div class="container">
+            <a href="portfolio.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            <div class="project-info-grid">
+                <div class="project-desc">
+                    <img src="images/project3.jpg" alt="Creative Agency" class="project-main-img">
+                    <h2>The Visionary Studios Project</h2>
+                    <p>For this creative agency based in Lagos, OBHAS WEBS focused on building a "living" portfolio. The goal was to showcase their artistic work through smooth transitions and high-quality visual galleries.</p>
+                    <br>
+                    <p>We implemented custom UI animations that engage users the moment they land on the page. The site isn't just a website; it's an experience that reflects the agency's own creative standard.</p>
+                </div>
+                <div class="project-sidebar">
+                    <div class="spec-list">
+                        <h4>Project Details</h4>
+                        <ul style="list-style:none; padding:0;">
+                            <li style="display:flex; justify-content:space-between; margin-bottom:10px; border-bottom:1px solid #ddd;"><span>Client:</span> <strong>Visionary Studios</strong></li>
+                            <li style="display:flex; justify-content:space-between; margin-bottom:10px; border-bottom:1px solid #ddd;"><span>Category:</span> <strong>UI/UX Design</strong></li>
+                            <li style="display:flex; justify-content:space-between; margin-bottom:10px; border-bottom:1px solid #ddd;"><span>Tech:</span> <strong>HTML5, GSAP, CSS3</strong></li>
+                            <li style="display:flex; justify-content:space-between; margin-bottom:10px; border-bottom:1px solid #ddd;"><span>Duration:</span> <strong>5 Weeks</strong></li>
+                        </ul>
+                        <button class="btn-orange full-width" style="margin-top:20px;">Launch Site</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

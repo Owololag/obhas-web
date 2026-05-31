@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | OBHAS WEBS</title>
+    <meta name="description" content="Explore our portfolio of web development and IT projects. See how we've helped businesses in Lagos and Nigeria succeed online.">
+    <meta name="keywords" content="portfolio, web development projects, IT solutions Nigeria, Lagos web design">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Custom Styles for Portfolio -->
+    <style>
+        .portfolio-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark) 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .portfolio-content {
+            padding: 30px;
+        }
+
+        .portfolio-category {
+            background: var(--orange);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--navy);
+        }
+
+        .portfolio-desc {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: var(--light);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: var(--navy);
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            background: var(--orange);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .portfolio-link:hover {
+            background: var(--dark);
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--orange);
+            color: var(--orange);
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--orange);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-buttons {
+                gap: 10px;
+            }
+
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="OBHAS WEBS Logo">
+                <span>OBHAS WEBS</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn-orange">Get in Touch</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Hero -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+            <p>Discover the digital solutions we've crafted for businesses across Nigeria</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="business">Business Solutions</button>
+                <button class="filter-btn" data-filter="creative">Creative Design</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- E-Commerce Project -->
+                <div class="portfolio-item" data-category="web">
+                    <img src="images/project1.jpg" alt="E-Commerce Site" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Web Development</span>
+                        <h3 class="portfolio-title">E-Commerce Platform</h3>
+                        <p class="portfolio-desc">A comprehensive online store with secure payments, inventory management, and mobile optimization for a Lagos-based retailer.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <a href="project-details.html" class="portfolio-link">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Business Portfolio Project -->
+                <div class="portfolio-item" data-category="business">
+                    <img src="images/project2.jpg" alt="Business Portfolio" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Business Solutions</span>
+                        <h3 class="portfolio-title">Corporate Portfolio</h3>
+                        <p class="portfolio-desc">Professional business website with integrated lead generation, downloadable brochures, and corporate branding for Global Partners Ltd.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                        <a href="project-business.html" class="portfolio-link">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Creative Agency Project -->
+                <div class="portfolio-item" data-category="creative">
+                    <img src="images/project3.jpg" alt="Creative Agency" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Creative Design</span>
+                        <h3 class="portfolio-title">Creative Agency Site</h3>
+                        <p class="portfolio-desc">Dynamic portfolio website with custom animations, interactive galleries, and modern design for The Visionary Studios.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">GSAP</span>
+                            <span class="tech-tag">CSS Animations</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <a href="project-creative.html" class="portfolio-link">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Additional Projects Placeholder -->
+                <div class="portfolio-item" data-category="web">
+                    <img src="images/project1.jpg" alt="Mobile App" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Web Development</span>
+                        <h3 class="portfolio-title">Mobile-First Web App</h3>
+                        <p class="portfolio-desc">Responsive web application designed primarily for mobile users, featuring offline capabilities and push notifications.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">Service Workers</span>
+                            <span class="tech-tag">IndexedDB</span>
+                        </div>
+                        <a href="#" class="portfolio-link">Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="business">
+                    <img src="images/project2.jpg" alt="IT Solutions" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Business Solutions</span>
+                        <h3 class="portfolio-title">Network Infrastructure</h3>
+                        <p class="portfolio-desc">Complete IT infrastructure setup including secure networking, cloud migration, and 24/7 monitoring for a growing Lagos business.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Cisco</span>
+                            <span class="tech-tag">Monitoring Tools</span>
+                            <span class="tech-tag">Security</span>
+                        </div>
+                        <a href="#" class="portfolio-link">Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="creative">
+                    <img src="images/project3.jpg" alt="Brand Identity" class="portfolio-img">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Creative Design</span>
+                        <h3 class="portfolio-title">Brand Identity Package</h3>
+                        <p class="portfolio-desc">Complete brand identity design including logo, color palette, typography, and brand guidelines for a new Lagos startup.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Adobe Creative Suite</span>
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Brand Strategy</span>
+                            <span class="tech-tag">Print Design</span>
+                        </div>
+                        <a href="#" class="portfolio-link">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-light">
+        <div class="container text-center">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how we can bring your vision to life with cutting-edge technology and creative design.</p>
+            <a href="index.html#contact" class="btn-orange">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark section">
+        <div class="container grid-3">
+            <div class="footer-col">
+                <h3>OBHAS WEBS</h3>
+                <p>Connecting Creativity Online. Your trusted partner for web design and IT solutions in Nigeria.</p>
+                <div class="social-icons" style="margin-top: 20px;">
+                    <a href="https://www.facebook.com/owololag"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/obhas_?igsh=bHdycHAwOGR2YnE1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/owolola-gabriel-446812213?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/18187924887" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul style="margin-top: 15px;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#services">Our Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul style="margin-top: 15px;">
+                    <li>Web Development</li>
+                    <li>IT Solutions</li>
+                    <li>Digital Strategy</li>
+                    <li>Mobile App Development</li>
+                    <li>Data Analytics & BI</li>
+                    <li>Training & Consulting</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container text-center" style="margin-top: 40px; border-top: 1px solid #222; padding-top: 20px;">
+            <p>&copy; 2024 OBHAS WEBS. Designed by Owolola Gabriel.</p>
+        </div>
+    </footer>
+
+    <!-- Link to JS -->
+    <script src="script.js"></script>
+
+    <!-- Portfolio Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | OBHAS WEBS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-header { background: var(--navy); padding: 120px 0 60px; color: white; text-align: center; }
+        .project-body { padding: 60px 0; }
+        .project-main-img { width: 100%; border-radius: 15px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--orange); font-weight: 600; }
+        .project-info-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+        .spec-list { background: var(--light); padding: 30px; border-radius: 10px; }
+        .spec-list h4 { margin-bottom: 15px; border-bottom: 2px solid var(--orange); display: inline-block; }
+        .spec-list li { margin-bottom: 10px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        @media (max-width: 768px) { .project-info-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo"> 
+                <span>OBHAS WEBS</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="project-header">
+        <div class="container">
+            <h1>Project Showcases</h1>
+            <p>A deep dive into the solutions we built.</p>
+        </div>
+    </div>
+
+    <section class="project-body">
+        <div class="container">
+            <a href="portfolio.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            
+            <div class="project-info-grid">
+                <div class="project-desc">
+                    <img src="images/project1.jpg" alt="Project Large" class="project-main-img" id="mainProjectImg">
+                    <h2 id="projectTitle">E-Commerce Solution</h2>
+                    <p id="projectLongDesc">
+                        This project involved building a high-performance e-commerce platform designed for the Nigerian market. 
+                        We integrated secure local payment gateways, a real-time inventory management system, and a 
+                        mobile-first user interface to ensure high conversion rates.
+                    </p>
+                    <br>
+                    <p>Features include automated email notifications, a custom admin dashboard, and full SEO optimization to ensure the business ranks well on Google for local searches in Lagos.</p>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="spec-list">
+                        <h4>Project Details</h4>
+                        <ul>
+                            <li><span>Client:</span> <strong id="clientName">Retail Hub</strong></li>
+                            <li><span>Category:</span> <strong>Web Development</strong></li>
+                            <li><span>Tech Stack:</span> <strong>React, Node, SQL</strong></li>
+                            <li><span>Duration:</span> <strong>4 Weeks</strong></li>
+                        </ul>
+                        <a href="#" class="btn-orange full-width text-center" style="margin-top: 20px;">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 OBHAS WEBS. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
